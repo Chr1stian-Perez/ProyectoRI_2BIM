@@ -100,15 +100,15 @@ El script `setup.py` maneja automáticamente:
 
 ### Ejecución
 
-\`\`\`bash
+```bash
 streamlit run app.py
-\`\`\`
+```
 
 La aplicación estará disponible en `http://localhost:8501`
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
-\`\`\`
+```
 ProyectoRI_2BIM/
 ├── src/
 │   ├── data_processing/     # Carga y procesamiento de corpus
@@ -124,11 +124,11 @@ ProyectoRI_2BIM/
 ├── app.py                  # Punto de entrada principal
 ├── requirements.txt        # Dependencias Python
 └── README.md              # Documentación
-\`\`\`
+```
 
-## 📁 Estructura de Datos
+## Estructura de Datos
 
-\`\`\`
+```
 data/
 ├── flickr8k/
 │   ├── captions.txt          # Descripciones de imágenes
@@ -136,7 +136,7 @@ data/
 │   └── Flickr8k.token.txt   # Formato alternativo de captions
 └── english_dictionary/
     ├── english_dictionary.csv            # Definiciones en formato CSV
-\`\`\`
+```
 
 ##  Configuración Técnica
 
