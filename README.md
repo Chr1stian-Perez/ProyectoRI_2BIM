@@ -13,13 +13,13 @@ Sistema de Recuperación de Información multimodal que implementa búsqueda por
 **Asignatura:** ICCD753 - Recuperación de Información  
 **Período:** 2025A
 
-##  Arquitectura del Sistema
+##  Arquitectura del sistema
 
-### Componentes Principales
+### Componentes principales
 
-1. **Embeddings Multimodales**: CLIP ViT-B/32 para generar representaciones vectoriales de 512 dimensiones
-2. **Indexación Vectorial**: FAISS IndexFlatIP para búsqueda eficiente por similitud coseno
-3. **Corpus Multimodal**: 
+1. **Embeddings multimodales**: CLIP ViT-B/32 para generar representaciones vectoriales de 512 dimensiones
+2. **Indexación vectorial**: FAISS IndexFlatIP para búsqueda eficiente por similitud coseno
+3. **Corpus multimodal**: 
    - Flickr8k (imágenes con descripciones)
    - English Dictionary (conceptos y definiciones)
 4. **Generación de Respuestas**: Gemini 2.0 Flash para síntesis contextual
@@ -27,9 +27,9 @@ Sistema de Recuperación de Información multimodal que implementa búsqueda por
 
 ### Flujo de Procesamiento
 
-\`\`\`
+```
 Consulta (Imagen/Texto) → Embedding CLIP → Búsqueda FAISS → Contexto → Gemini → Respuesta
-\`\`\`
+```
 
 ## Instalación y Configuración
 
