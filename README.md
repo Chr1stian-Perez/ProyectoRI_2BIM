@@ -42,15 +42,15 @@ Consulta (Imagen/Texto) → Embedding CLIP → Búsqueda FAISS → Contexto → 
 ### Instalación Paso a Paso
 
 1. **Clonar el repositorio**
-\`\`\`bash
+```bash
 git clone <repository-url>
 cd ProyectoRI_2BIM
-\`\`\`
+```
 
 2. **Ejecutar instalación completa**
-\`\`\`bash
+```bash
 python setup.py
-\`\`\`
+```
 
 Este script único:
 - ✅ Verifica Python y pip
@@ -62,19 +62,19 @@ Este script único:
 - ✅ Prueba la instalación completa
 
 3. **Configurar API keys (opcional)**
-\`\`\`bash
+```bash
 # Editar .env con sus keys
 nano .env
 # Configurar:
 GEMINI_API_KEY=your_actual_gemini_key
 KAGGLE_USERNAME=your_kaggle_username  
 KAGGLE_KEY=your_kaggle_key
-\`\`\`
+```
 
 4. **Ejecutar aplicación**
-\`\`\`bash
+```bash
 python run.py
-\`\`\`
+```
 
 ### Instalación Automática
 
