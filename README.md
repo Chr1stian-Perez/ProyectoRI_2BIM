@@ -178,7 +178,7 @@ data/
 4. **Ranking**: Por relevancia semántica
 5. **Síntesis**: Respuesta multimodal integrada
 
-## Corpus de Datos Reales
+## Corpus de Datos
 
 ### Flickr8k Dataset
 - **Fuente**: [Kaggle - Flickr8k](https://www.kaggle.com/datasets/adityajn105/flickr8k)
