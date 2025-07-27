@@ -168,7 +168,7 @@ data/
 2. **Procesamiento**: Generación de embedding visual
 3. **Recuperación**: Búsqueda de imágenes similares
 4. **Identificación**: Mapeo a conceptos textuales
-5. **Generación**: Respuesta contextual educativa
+5. **Generación**: Respuesta contextual basada unicamente en el corpus
 
 ### Búsqueda por Texto
 
@@ -192,12 +192,12 @@ data/
 - **Contenido**: 42,052 palabras en inglés con sus definiciones correspondientes
 - **Dominio**: Vocabulario completo desde términos comunes hasta palabras especializadas
 - **Formato**: CSV con columnas word/definition
-- **Tamaño**: ~5MB
+- **Tamaño**: ~ 5MB
 - **Calidad**: Definiciones detalladas y precisas para cada palabra
 
-##  Configuración de Corpus
+##  Configuración de corpus
 
-### Limitaciones de Rendimiento
+### Limitaciones de rendimiento
 - **Flickr8k**: Limitado a 1,500 imágenes para rendimiento inicial
 - **English Dictionary**: Filtrado de definiciones con mínimo 10 caracteres
 - **Caché**: Embeddings persistentes para evitar recálculos
@@ -205,24 +205,24 @@ data/
 ### Formato de Datos
 
 **Flickr8k**:
-\`\`\`
+```
 image,caption
 1000268201_693b08cb0e.jpg,"A child in a pink dress is climbing up a set of stairs in an entry way ."
 1000268201_693b08cb0e.jpg,"A girl going into a wooden building ."
-\`\`\`
+```
 
 **English Dictionary**:
-\`\`\`json
+```json
 {
   "word": "dog",
   "definition": "A domesticated carnivorous mammal...",
   "category": "animal"
 }
-\`\`\`
+```
 
-## 🔍 Metodología de Evaluación
+## Metodología de Evaluación
 
-### Métricas Cuantitativas
+### Métricas cuantitativas
 
 - **Similitud Coseno**: Medida primaria de relevancia
 - **Tiempo de Respuesta**: < 3 segundos objetivo
@@ -261,12 +261,6 @@ image,caption
 - Estudios de similitud semántica
 - Evaluación de modelos multimodales
 - Benchmarking de sistemas RAG
-
-### Aplicaciones Comerciales
-- Búsqueda visual en catálogos
-- Recomendaciones basadas en imágenes
-- Análisis de contenido multimedia
-- Asistentes virtuales multimodales
 
 ## Limitaciones Conocidas
 
