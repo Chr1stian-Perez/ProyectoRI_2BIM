@@ -314,4 +314,3 @@ Este proyecto es desarrollado con fines académicos para la Escuela Politécnica
 
 **Fecha de Última Actualización**: Enero 2025  
 **Versión**: 1.0.0  
-**Estado**: Proyecto Académico Completado

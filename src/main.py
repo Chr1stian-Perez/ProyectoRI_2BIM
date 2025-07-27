@@ -56,8 +56,8 @@ class MultimodalRAGApp:
                 except Exception as e:
                     st.error(f"Error inicializando sistema: {e}")
                     st.error("Verificar:")
-                    st.error("1. GEMINI_API_KEY esté configurada en .env")
-                    st.error("2. Los datasets estén descargados correctamente")
+                    st.error("1. GEMINI_API_KEY configurada en .env")
+                    st.error("2. Los datasets estén descargados correctamente en /data")
                     st.stop()
         
         self.retriever = st.session_state.retriever
@@ -93,7 +93,6 @@ class MultimodalRAGApp:
             horizontal=True,
             key="search_mode_radio" # Añadir una clave única
         )
-        
         # Resetear resultados si el modo de búsqueda cambia
         if st.session_state.get('prev_search_mode', search_mode) != search_mode:
             st.session_state.show_results = False
@@ -294,7 +293,7 @@ class MultimodalRAGApp:
             st.markdown("""
             **Arquitectura:**
             - ​🪄​ Modelo: CLIP ViT-B/32
-            - 🔍 Índice: FAISS IndexFlatIP
+            - 📋 Índice: FAISS IndexFlatIP
             - 🤖Generación: Gemini 2.0 Flash
             - ​📋​ Dimensiones: 512D
             

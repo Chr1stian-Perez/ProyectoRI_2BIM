@@ -1,5 +1,5 @@
 """
-Punto de entrada principal para la aplicación Streamlit
+Script principal para la aplicación Streamlit
 """
 import sys
 import os

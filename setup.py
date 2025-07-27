@@ -1,5 +1,5 @@
 """
-Script de instalación completa para ProyectoRI_2BIM
+Script de instalación completa para el proyecto
 Instala dependencias, configura entorno, descarga datasets y corrige importaciones
 """
 import subprocess
@@ -11,7 +11,7 @@ from pathlib import Path
 import platform
 
 class ProyectoRISetup:
-    """Instalador completo para ProyectoRI_2BIM"""
+    """Instalador completo para el proyecto"""
     
     def __init__(self):
         self.project_root = Path(__file__).parent
@@ -28,7 +28,7 @@ class ProyectoRISetup:
     
     def run_command(self, command, description, check=True):
         """Ejecuta comando y maneja errores"""
-        print(f"🔄 {description}...")
+        print(f"🔄 {description}")
         try:
             result = subprocess.run(command, shell=True, capture_output=True, text=True)
             if result.returncode == 0:
@@ -108,15 +108,13 @@ class ProyectoRISetup:
             try:
                 shutil.copy(env_example, env_file)
                 print("✅ Archivo .env creado desde .env.example")
-                print("⚠️  IMPORTANTE: Configure sus API keys en .env")
-                print("   - GEMINI_API_KEY: https://makersuite.google.com/app/apikey")
-                print("   - KAGGLE_USERNAME y KAGGLE_KEY: https://www.kaggle.com/account")
+                print("⚠️  IMPORTANTE: Configurar las API keys en .env")
                 return True
             except Exception as e:
                 print(f"❌ Error creando .env: {e}")
                 return False
         else:
-            print("⚠️  Archivo .env.example no encontrado")
+            print("⚠️  Archivo .env no encontrado")
             return True
     
     def get_compatible_requirements(self):
@@ -169,12 +167,12 @@ class ProyectoRISetup:
         # Instalar dependencias críticas primero
         critical_deps = ["numpy>=1.24.3", "pillow>=10.0.0", "requests>=2.31.0", "python-dotenv>=1.0.0"]
         
-        print("📦 Instalando dependencias críticas...")
+        print("Instalando dependencias")
         for dep in critical_deps:
             self.run_command(f"pip install {dep}", f"Instalando {dep}", check=False)
         
         # Instalar PyTorch
-        print("🧠 Instalando PyTorch...")
+        print("✅Instalando PyTorch")
         python_version = sys.version_info
         
         if python_version >= (3, 12):
@@ -187,7 +185,6 @@ class ProyectoRISetup:
             self.run_command("pip install torch torchvision", "Instalando PyTorch (fallback)", check=False)
         
         # Instalar resto de dependencias
-        print("📦 Instalando dependencias restantes...")
         remaining_deps = [
             "sentence-transformers>=2.2.2",
             "faiss-cpu>=1.7.4", 
@@ -288,7 +285,7 @@ sys.path.insert(0, str(src_dir))
             return False
             
         except Exception as e:
-            print(f"❌ Error procesando {file_path}: {e}")
+            print(f"Error procesando {file_path}: {e}")
             return False
     
     def download_datasets(self):
@@ -386,7 +383,7 @@ from pathlib import Path
 def main():
     """Ejecuta la aplicación"""
     
-    print("🚀 Iniciando ProyectoRI_2BIM...")
+    print("Iniciando ProyectoRI_2BIM...")
     
     # Configurar path
     project_root = Path(__file__).parent
@@ -396,7 +393,7 @@ def main():
     # Verificar que app.py existe
     app_file = project_root / "app.py"
     if not app_file.exists():
-        print("❌ app.py no encontrado")
+        print("app.py no encontrado")
         return 1
     
     # Intentar ejecutar con streamlit
@@ -426,24 +423,12 @@ if __name__ == "__main__":
         """Muestra instrucciones finales"""
         self.print_header("Instalación Completada")
         
-        print("🎉 ProyectoRI_2BIM instalado exitosamente!")
-        print()
-        print("📋 Próximos pasos:")
-        print("1. Configure sus API keys en .env:")
-        print("   - GEMINI_API_KEY (para generación de respuestas)")
-        print("   - KAGGLE_USERNAME y KAGGLE_KEY (para datasets completos)")
-        print()
-        print("🚀 Para ejecutar la aplicación:")
-        print("   python run.py")
-        print("   O directamente: streamlit run app.py")
-        print()
-        print("📚 Documentación completa en README.md")
-        print()
+        print("Instalación completada exitosamente!")
         print("✅ Sistema listo para usar!")
     
     def run_full_setup(self):
         """Ejecuta instalación completa"""
-        print("🚀 INSTALADOR COMPLETO - ProyectoRI_2BIM")
+        print("Instalación completada exitosamente!")
         print("Autores: Fricxon Pambabay, Christian Pérez, Jeremmy Perugachi")
         print("Institución: Escuela Politécnica Nacional")
         
@@ -469,13 +454,10 @@ if __name__ == "__main__":
                 failed_steps.append(step_name)
         
         if failed_steps:
-            print(f"\n⚠️  Pasos que fallaron: {', '.join(failed_steps)}")
-            print("La aplicación puede funcionar con limitaciones")
-        
+            print(f"\n⚠️  Errores: {', '.join(failed_steps)}")   
         self.show_final_instructions()
         
         return len(failed_steps) == 0
-
 def main():
     """Función principal"""
     installer = ProyectoRISetup()

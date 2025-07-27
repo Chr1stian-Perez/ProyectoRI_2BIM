@@ -1,5 +1,5 @@
 """
-Script para descargar los datasets reales Flickr8k y English Dictionary
+Script para descargar los datasets de los corpus Flickr8k y English Dictionary
 """
 import sys
 import os
@@ -13,7 +13,6 @@ from src.data_processing.corpus_loader import CorpusLoader
 from src.utils.logger import setup_logger
 
 logger = setup_logger(__name__)
-
 def setup_kaggle_credentials():
     """Guía para configurar credenciales de Kaggle"""
     kaggle_dir = Path.home() / ".kaggle"
@@ -28,7 +27,6 @@ def setup_kaggle_credentials():
         print("KAGGLE_KEY=key")
         print("=" * 50)
         return True  # kagglehub no requiere credenciales obligatorias
-    print("✅ Credenciales de Kaggle encontradas")
     return True
 def download_all_datasets():
     """Descarga todos los datasets necesarios"""
@@ -48,7 +46,7 @@ def download_all_datasets():
     else:
         print("❌ Error descargando Flickr8k")
     # Descargar English Dictionary
-    print("\n📚 Descargando corpus English Dictionary desde Kaggle")
+    print("\nDescargando corpus English Dictionary desde Kaggle")
     dict_success = loader.download_english_dictionary()
     
     if dict_success:
@@ -77,7 +75,7 @@ def main():
         print("-- Datasets cargados --")
         print("Ejecutar con : streamlit run app.py")
     else:
-        print("⚠️  Algunos datasets no se pudieron descargar")
+        print("Algunos datasets no se pudieron descargar")
     return 0 if success else 1
 if __name__ == "__main__":
     sys.exit(main())
