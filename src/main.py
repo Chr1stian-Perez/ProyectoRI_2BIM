@@ -67,12 +67,12 @@ class MultimodalRAGApp:
         """Renderiza el encabezado de la aplicación"""
         st.set_page_config(
             page_title="ProyectoRI_2BIM - Sistema RAG Multimodal",
-            page_icon="🗿​",
+            page_icon="📚​",
             layout="wide"
         )
         
-        st.title("​📚​Proyecto Retrieval Information 2do Bimestre📚​")
-        st.subheader("Sistema de Recuperación de Información Multimodal")
+        st.title("​📚​Proyecto Retrieval Information 2do Bimestre​")
+        st.subheader("Sistema de Recuperación de Información Multimodal 🗿")
         
         st.markdown("""
         **Autores:** Fricxon Pambabay, Christian Pérez, Jeremmy Perugachi  

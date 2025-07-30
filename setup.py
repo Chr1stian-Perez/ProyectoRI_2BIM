@@ -23,7 +23,7 @@ class ProyectoRISetup:
     def print_header(self, title):
         """Imprime encabezado formateado"""
         print(f"\n{'='*60}")
-        print(f"🚀 {title}")
+        print(f" {title}")
         print(f"{'='*60}")
     
     def run_command(self, command, description, check=True):
@@ -202,7 +202,7 @@ class ProyectoRISetup:
         if self.run_command("streamlit --version", "Verificando Streamlit", check=False):
             print("✅ Streamlit instalado correctamente")
         else:
-            print("⚠️  Streamlit disponible con: python -m streamlit")
+            print("Streamlit disponible con: python -m streamlit")
         
         return True
     
@@ -299,15 +299,8 @@ sys.path.insert(0, str(src_dir))
             
             loader = CorpusLoader()
             
-            # Descargar 3D-EX (solo JSON, desde GitHub)
-            print("📚 Descargando 3D-EX.json desde GitHub...")
-            if loader.download_3d_ex():
-                print("✅ 3D-EX.json descargado exitosamente")
-            else:
-                print("⚠️  3D-EX.json falló, el sistema operará sin datos de 3D-EX.")
-            
             # Intentar descargar Flickr8k
-            print("📸 Intentando descargar Flickr8k desde Kaggle...")
+            print(" Intentando descargar Flickr8k desde Kaggle")
             if loader.download_flickr8k():
                 print("✅ Flickr8k descargado exitosamente")
             else:
@@ -315,7 +308,7 @@ sys.path.insert(0, str(src_dir))
                 print("   O el sistema operará sin datos de Flickr8k.")
             
             # Verificar datasets
-            print("🔍 Verificando datasets...")
+            print("🔍 Verificando datasets")
             try:
                 flickr_data = loader.load_flickr8k_real()
                 concepts_data = loader.load_3d_ex_real()

@@ -126,7 +126,7 @@ class CorpusLoader:
     
     def load_flickr8k_real(self) -> Dict:
         """Carga el dataset real de Flickr8k"""
-        logger.info("Cargando dataset real Flickr8k...")
+        logger.info("Cargando dataset real Flickr8k")
         
         if not self.download_flickr8k():
             logger.error("No se pudo descargar Flickr8k - verifique credenciales de Kaggle")
@@ -301,7 +301,7 @@ class CorpusLoader:
             if 'dog' in dictionary_data:
                 logger.info(f"✅ Palabra 'dog' encontrada: {dictionary_data['dog']['definition'][:100]}...")
             else:
-                logger.warning("⚠️ Palabra 'dog' no encontrada en el diccionario")
+                logger.warning("Palabra 'dog' no encontrada en el diccionario")
             
             return dictionary_data
             

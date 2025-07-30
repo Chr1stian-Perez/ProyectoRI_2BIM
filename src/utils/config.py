@@ -42,7 +42,7 @@ HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
 
 # Configuración de búsqueda
 TOP_K_RESULTS = int(os.getenv("TOP_K_RESULTS", "5"))
-MIN_SIMILARITY_THRESHOLD = float(os.getenv("MIN_SIMILARITY_THRESHOLD", "0.01"))  # Reducido de 0.1 a 0.01
+MIN_SIMILARITY_THRESHOLD = float(os.getenv("MIN_SIMILARITY_THRESHOLD", "0.01")) 
 
 # Configuración de archivos soportados
 SUPPORTED_IMAGE_FORMATS = ["jpg", "jpeg", "png", "webp", "bmp"]
@@ -53,8 +53,8 @@ FLICKR8K_KAGGLE_DATASET = "adityajn105/flickr8k"
 ENGLISH_DICTIONARY_KAGGLE_DATASET = "anthonytherrien/larger-dictionary-of-english-words-and-definitions"
 
 # Configuración de corpus
-FLICKR8K_MAX_IMAGES = int(os.getenv("FLICKR8K_MAX_IMAGES", "1500")) # Límite para Flickr8k
-DICTIONARY_MAX_ENTRIES = int(os.getenv("DICTIONARY_MAX_ENTRIES", "5000")) # Reducido de 10000 a 5000 para mejor rendimiento
+FLICKR8K_MAX_IMAGES = int(os.getenv("FLICKR8K_MAX_IMAGES", "15000")) # Límite para Flickr8k
+DICTIONARY_MAX_ENTRIES = int(os.getenv("DICTIONARY_MAX_ENTRIES", "80000")) # Reducido
 CONCEPTS_MIN_DEFINITION_LENGTH = 10
 
 # Configuración de logging
