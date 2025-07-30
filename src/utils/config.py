@@ -53,7 +53,7 @@ FLICKR8K_KAGGLE_DATASET = "adityajn105/flickr8k"
 ENGLISH_DICTIONARY_KAGGLE_DATASET = "anthonytherrien/larger-dictionary-of-english-words-and-definitions"
 
 # Configuración de corpus
-FLICKR8K_MAX_IMAGES = int(os.getenv("FLICKR8K_MAX_IMAGES", "15000")) # Límite para Flickr8k
+FLICKR8K_MAX_IMAGES = int(os.getenv("FLICKR8K_MAX_IMAGES", "5000")) # Límite para Flickr8k
 DICTIONARY_MAX_ENTRIES = int(os.getenv("DICTIONARY_MAX_ENTRIES", "80000")) # Reducido
 CONCEPTS_MIN_DEFINITION_LENGTH = 10
 
